@@ -1,5 +1,5 @@
-name("Sandbox RP Framework MDT")
-description("Mobile Data Terminal Written For Sandbox RP Framework")
+name("Pulsar Framework MDT")
+description("Mobile Data Terminal Written For Pulsar Framework")
 author("Dr Nick")
 lua54("yes")
 fx_version("cerulean")

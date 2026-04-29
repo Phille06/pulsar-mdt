@@ -96,7 +96,7 @@ export default () => {
             //     {
             //         id: 1,
             //         label: "SOPs",
-            //         link: "https://sandboxrp.gg/files/pd_sop.pdf"
+            //         link: "https://pulsarfw.com/files/pd_sop.pdf"
             //     },
             // ]);
             // setSelected(1);
@@ -230,7 +230,7 @@ export default () => {
                                                 </>
                                             ) : (
                                                 <>
-                                                    <iframe src={docs.find(d => d.id == selected)?.link} title="sandbox" width="100%" height={isSysAdmin ? "95%" : "100%"}></iframe>
+                                                    <iframe src={docs.find(d => d.id == selected)?.link} title="pulsar" width="100%" height={isSysAdmin ? "95%" : "100%"}></iframe>
                                                     {isSysAdmin && <Button fullWidth onClick={() => onRemoveDocument(docs.find(d => d.id == selected)?.id)}>Remove Document</Button>}
                                                 </>
                                             )}
