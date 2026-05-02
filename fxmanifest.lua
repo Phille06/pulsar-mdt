@@ -1,6 +1,7 @@
 name("Pulsar Framework MDT")
 description("Mobile Data Terminal Written For Pulsar Framework")
 author("Dr Nick")
+version("1.0.1")
 lua54("yes")
 fx_version("cerulean")
 game("gta5")
@@ -9,16 +10,16 @@ client_script("@pulsar-pwnzor/client/check.lua")
 server_script("@oxmysql/lib/MySQL.lua")
 
 client_scripts({
-    "client/**/*.lua"
+  "client/**/*.lua"
 })
 
 server_scripts({
-    '@oxmysql/lib/MySQL.lua',
-    "server/**/*.lua"
+  '@oxmysql/lib/MySQL.lua',
+  "server/**/*.lua"
 })
 
 shared_scripts({
-    "shared/*.lua",
+  "shared/*.lua",
 })
 
 ui_page("ui/dist/index.html")

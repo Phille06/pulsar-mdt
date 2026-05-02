@@ -26,6 +26,7 @@ AddEventHandler('onResourceStart', function(resource)
 		Wait(1000)
 		RegisterMiddleware()
 		Startup()
+    exports['pulsar-core']:VersionCheck('PulsarFW/pulsar-mdt')
 		TriggerEvent("MDT:Server:RegisterCallbacks")
 
 		Wait(2500)
