@@ -12,9 +12,6 @@ jobs:
   create-release:
     runs-on: ubuntu-latest
     steps:
-      - name: Install zip
-        run: sudo apt install zip
-
       - name: Get latest code
         uses: actions/checkout@v4
 
@@ -33,11 +30,9 @@ jobs:
 
       - name: Bundle files
         run: |
-          mkdir -p ./temp/pulsar-mdt
-          cp ./{README.md,fxmanifest.lua} ./temp/pulsar-mdt
-          cp -r ./{client,server,shared,ui} ./temp/pulsar-mdt
-          rm -rf ./temp/pulsar-mdt/ui/node_modules
-          cd ./temp && zip -r ../pulsar-mdt.zip ./pulsar-mdt
+          mkdir -p staging/pulsar-mdt
+          rsync -a --exclude='.github' --exclude='node_modules' --exclude='staging' . staging/pulsar-mdt/
+          cd staging && zip -r ../pulsar-mdt.zip pulsar-mdt/
 
       - name: Create release
         uses: softprops/action-gh-release@v2
