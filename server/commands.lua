@@ -1,6 +1,6 @@
 function RegisterChatCommands()
 	exports["pulsar-chat"]:RegisterAdminCommand("setcallsign", function(source, args, rawCommand)
-		local newCallsign = args[2]
+		local newCallsign = tonumber(args[2])
 		local target = exports['pulsar-characters']:FetchBySID(tonumber(args[1]))
 		if target ~= nil then
 			if
